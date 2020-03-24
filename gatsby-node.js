@@ -1,4 +1,4 @@
-exports.onCreateNode = ({ actions }) => {
+exports.createPages = ({ actions }) => {
   const { createRedirect } = actions
   createRedirect({
     fromPath: "https://slim-media.netlify.com/*",

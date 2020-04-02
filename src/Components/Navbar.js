@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const NavBar = () => {
   const data = useStaticQuery(graphql`
     {
-      contentfulTitle {
+      contentfulSlimMedia {
         navbarLogo {
           file {
             url
@@ -16,7 +16,7 @@ const NavBar = () => {
     }
   `)
 
-  const [isTop, setIsTop] = useState(true)
+  const [, setIsTop] = useState(true)
   const [isExpanded, setIsExpanded] = useState(false)
 
   const setTop = height => {
@@ -61,7 +61,7 @@ const NavBar = () => {
         <Navbar.Collapse className="toggled" id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Navbar.Brand>
-              <img src={data.contentfulTitle.navbarLogo.file.url} alt="logo" width="50px"></img>
+              <img src={data.contentfulSlimMedia.navbarLogo.file.url} alt="logo" width="50px"></img>
             </Navbar.Brand>
           </Nav>
           <Nav className="ml-auto">

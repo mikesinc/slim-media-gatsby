@@ -10,12 +10,12 @@ export default ({ data }) => {
   return (
     <>
       <Navbar />
-      <SEO title={data.contentfulTitle.title} />
+      <SEO title={data.contentfulSlimMedia.title} />
       <Container fluid className="overall">
         <Container fluid className="banner">
           <video className="backgroundVideo" loop autoPlay muted>
             <source
-              src={data.contentfulTitle.bannerVideo.file.url}
+              src={data.contentfulSlimMedia.bannerVideo.file.url}
               type="video/mp4"
             />
             Your browser does not support the video.
@@ -24,9 +24,9 @@ export default ({ data }) => {
           <Container
             fluid
             className="glitch"
-            data-text={data.contentfulTitle.title}
+            data-text={data.contentfulSlimMedia.title}
           >
-            {data.contentfulTitle.title}
+            {data.contentfulSlimMedia.title}
           </Container>
         </Container>
 
@@ -34,17 +34,17 @@ export default ({ data }) => {
           fluid
           className="about"
           style={{
-            backgroundImage: `url(${data.contentfulTitle.tonyImage.file.url}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))`,
+            backgroundImage: `url(${data.contentfulSlimMedia.tonyImage.file.url}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))`,
           }}
         >
-          <p>{data.contentfulTitle.blurb.blurb}</p>
+          <p>{data.contentfulSlimMedia.blurb.blurb}</p>
         </Container>
 
         <Container fluid className="portfolio">
           <iframe
             className="portfolioVideo"
             title="Oh Gosh & Boomtick Presents; AJ Tracy"
-            src={data.contentfulTitle.preivewVideoLink}
+            src={data.contentfulSlimMedia.preivewVideoLink}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -66,16 +66,16 @@ export default ({ data }) => {
           fluid
           className="fightweek"
           style={{
-            backgroundImage: `url(${data.contentfulTitle.background2.file.url}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))`,
+            backgroundImage: `url(${data.contentfulSlimMedia.background2.file.url}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))`,
           }}
         >
-          <h1>{data.contentfulTitle.fightweekTitle}</h1>
-          <p>{data.contentfulTitle.fightweekBlurb}</p>
+          <h1>{data.contentfulSlimMedia.fightweekTitle}</h1>
+          <p>{data.contentfulSlimMedia.fightweekBlurb}</p>
           <p>Link to the series YouTube below</p>
           <iframe
             className="fightVideo"
             title="FIGHTWEEK EPISODE 1: Chris Killa Watt Pt1"
-            src={data.contentfulTitle.fightWeekVideoLink}
+            src={data.contentfulSlimMedia.fightWeekVideoLink}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -83,10 +83,10 @@ export default ({ data }) => {
         </Container>
 
         <Container fluid className="contact" style={{
-            backgroundImage: `url(${data.contentfulTitle.background3.file.url}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))`,
+            backgroundImage: `url(${data.contentfulSlimMedia.background3.file.url}), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))`,
           }}>
-          <h1>{data.contentfulTitle.contactTitle}</h1>
-          <p>{data.contentfulTitle.contactHeader}</p>
+          <h1>{data.contentfulSlimMedia.contactTitle}</h1>
+          <p>{data.contentfulSlimMedia.contactHeader}</p>
           <ContactForm />
           <Container fluid className="author">
           <Container fluid className="links">
@@ -170,7 +170,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    contentfulTitle {
+    contentfulSlimMedia {
       title
       blurb {
         blurb

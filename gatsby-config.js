@@ -7,7 +7,7 @@ module.exports = {
     title: `Slim Media`,
     description: `Slim Media Filmography by Perth based Tony Knight.`,
     author: `Tony Knight`,
-    // siteUrl: 
+    siteUrl: `https://slim-media.com/`
   },
   plugins: [
     {

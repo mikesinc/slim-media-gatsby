@@ -9,28 +9,31 @@ import SEO from "../Components/seo"
 export default ({ data }) => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <SEO title={data.contentfulSlimMedia.title} />
       <Container fluid className="overall">
         <Container fluid className="banner">
-          <video className="backgroundVideo" loop autoPlay muted>
+          <img style={{margin: '50px'}} height="200px" src={require("../assets/images/logo.png")}></img>
+          <h1 id="coming_soon" style={{ color: 'black'}}>Coming soon</h1>
+
+          {/* <video className="backgroundVideo" loop autoPlay muted>
             <source
               src={data.contentfulSlimMedia.bannerVideo.file.url}
               type="video/mp4"
             />
             Your browser does not support the video.
-          </video>
+          </video> */}
 
-          <Container
+          {/* <Container
             fluid
             className="glitch"
             data-text={data.contentfulSlimMedia.title}
           >
             {data.contentfulSlimMedia.title}
-          </Container>
+          </Container> */}
         </Container>
 
-        <Container
+        {/* <Container
           fluid
           className="about"
           style={{
@@ -162,7 +165,7 @@ export default ({ data }) => {
               </div>
             </div>
           </Container>
-        </Container>
+        </Container> */}
       </Container>
     </>
   )
